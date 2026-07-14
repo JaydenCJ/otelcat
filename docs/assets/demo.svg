@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" font-family="Menlo, Consolas, monospace" font-size="14">
+  <rect width="760" height="430" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="27" fill="#8b949e" text-anchor="middle" font-size="12">otelcat — point your SDK at it, see spans instantly</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="60"><tspan fill="#7ee787">$</tspan> otelcat</text>
+    <text x="24" y="82" fill="#8b949e">otelcat 0.1.0 — listening on http://127.0.0.1:4318</text>
+    <text x="24" y="116"><tspan font-weight="bold">trace</tspan> <tspan fill="#8b949e">4bf92f3577b34da6a3ce929d0e0e4736</tspan>  <tspan fill="#7ee787">checkout</tspan>  4 spans  <tspan fill="#e3b341">128ms</tspan>  <tspan fill="#8b949e">15:04:05.000</tspan></text>
+    <text x="24" y="140">  <tspan fill="#79c0ff">GET /api/checkout</tspan>    <tspan fill="#e3b341">128ms</tspan>  <tspan fill="#d2a8ff">SERVER</tspan>    <tspan fill="#7ee787">✓</tspan></text>
+    <text x="24" y="162" fill="#8b949e">       http.route = /api/checkout</text>
+    <text x="24" y="184">  <tspan fill="#8b949e">├─</tspan> <tspan fill="#79c0ff">validate-cart</tspan>    <tspan fill="#e3b341">12.1ms</tspan>  <tspan fill="#d2a8ff">INTERNAL</tspan>  <tspan fill="#7ee787">✓</tspan></text>
+    <text x="24" y="206" fill="#8b949e">  │       cart.items = 3</text>
+    <text x="24" y="228">  <tspan fill="#8b949e">├─</tspan> <tspan fill="#79c0ff">SELECT carts</tspan>      <tspan fill="#e3b341">8.7ms</tspan>  <tspan fill="#d2a8ff">CLIENT</tspan></text>
+    <text x="24" y="250" fill="#8b949e">  │       db.system.name = postgresql</text>
+    <text x="24" y="272">  <tspan fill="#8b949e">└─</tspan> <tspan fill="#79c0ff">POST /payments</tspan>   <tspan fill="#e3b341">88.9ms</tspan>  <tspan fill="#d2a8ff">CLIENT</tspan>    <tspan fill="#f85149" font-weight="bold">✗ ERROR card declined</tspan></text>
+    <text x="24" y="294" fill="#8b949e">          peer.service = payments</text>
+    <text x="24" y="316">          <tspan fill="#8b949e">•</tspan> <tspan fill="#e3b341">+40.2ms</tspan> <tspan fill="#f85149">exception</tspan>  <tspan fill="#8b949e">exception.type=</tspan>PaymentDeclined</text>
+    <text x="24" y="354"><tspan fill="#8b949e">15:04:05.005</tspan>  <tspan fill="#7ee787">INFO </tspan>  <tspan fill="#7ee787">checkout</tspan>  order received  <tspan fill="#8b949e">order.id=</tspan>8123</text>
+    <text x="24" y="376"><tspan fill="#8b949e">15:04:05.119</tspan>  <tspan fill="#f85149" font-weight="bold">ERROR</tspan>  <tspan fill="#7ee787">checkout</tspan>  payment failed  <tspan fill="#8b949e">trace=4bf92f35…</tspan></text>
+    <text x="24" y="406" fill="#8b949e">metrics 2 metrics: http.server.request.duration, … (accepted)</text>
+  </g>
+</svg>
